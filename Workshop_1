@@ -1,0 +1,23 @@
+Workshop 1-1
+
+age = 9;
+multiply = 7;
+document.write("Kids age is "+age+". ");
+document.write("In human age, dog is "+age*multiply +" year old. ");
+
+||-------------------------------------------------------------------||
+
+Workshop 1-2
+
+var i = 5; var j = 10;
+var k = 25;
+
+if (i < j) { 
+ console.log("i");
+ if (j > k) console.log("k");
+ }
+else console.log("j");
+var arr = [3, 5, 7];
+for (var i = 0; i <=3; ++i){
+console.log(arr[i]);
+}
