@@ -1,0 +1,20 @@
+// Define an object to hold data for a person
+var person = {
+    firstName:"John",
+    lastName:"Doe",
+    age:50,
+    eyeColor:"blue",
+    telephone:"05012345678",
+    address:"Kielotie 32 B 20, 01300, Vantaa",
+    printInfo: function() {
+return this.firstName+" "+this.lastName+" "+this.address;
+    }
+};
+
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.age);
+console.log(person.eyeColor);
+console.log(person.telephone);
+console.log(person.address);
+
