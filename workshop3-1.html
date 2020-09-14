@@ -17,7 +17,68 @@ table, tr, td{
 
 </style>
 <script>
+function startTime(){
+  var pvm = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+}</script>
+<script>
+  function showTable(){
+    var html = `
+    <h1> <b>Workshop 3 - button 2</b>
+    <table id="example" class="display" cellspacing="0" width="50%">
+    <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>$320,800</td>
+            </tr>
+            <tr>
+                <td>Garrett Winters</td>
+                <td>Accountant</td>
+                <td>$170,750</td>
+            </tr>
+            <tr>
+                <td>Ashton Cox</td>
+                <td>Junior Technical Author</td>
+                <td>$86,000</td>
+            </tr>
+            <tr>
+                <td>Cedric Kelly</td>
+                <td>Senior Javascript Developer</td>
+                <td>$433,060</td>
+            </tr>
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>$162,700</td>
+            </tr>
 
+        </tbody>
+    </table>
+  </h1>
+  `};
+</script>
+<script>
+  function People{
+    var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde", 
+	       "Camilla F. Strickland","391-2150 Ac Rd.","Andorra",
+	       "Reagan U. Andrews", "P.O. Box 472, 2271 Mauris Ave","Faroe Islands",
+	       "Kelsey D. Clark", "P.O. Box 866, 7793 Aliquet Ave","Bulgaria"
+];
+  }
+</script>
+<script>
 <!-- JavaScript goes here -->
 
 
@@ -33,8 +94,8 @@ good idea to save the lines of code you write during the exercises for later use
 <h2>Exercise 1</h2>
 <p>&nbsp;Below you will see three buttons. Edit the source code and add an onClick-events to these buttons.</p>
 <p>
-  <button>Button 1</button>
-  <button>Button 2</button>
+  <button onclick="alert('You clicked me! ');">Button 1</button>
+  <button onClick="document.write(showTable)">Button 2</button>
   <button>Button 3</button>
 </p>
 
