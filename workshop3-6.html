@@ -16,13 +16,6 @@ table, tr, td{
 }
 
 </style>
-<script>
-
-<!-- JavaScript goes here -->
-
-
-
-</script>
 
 <h1>Workshop 3: JavaScript Events</h1>
 <hr />
@@ -30,8 +23,28 @@ table, tr, td{
 good idea to save the lines of code you write during the exercises for later use.</p>
 
 <H2>Exercise 6</h2>
-<button>Get location</button> 
-<button>Show location</button> 
+  <p id="exc6"></p>
+<script>
+var x=document.getElementById("exc6");
+function getLocation() {
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+  x.innerHTML="Geolocation is not supported by this browser."
+  }
+}
+function showPosition(position) {
+  x.innerHTML = "Latitude: "+ position.coords.latitude + 
+  "<br>Longitude: " +position.coords.longitude;
+}
+navigator.geolocation.getCurrentPosition(position => {
+  console.log(position.coords.latitude)
+  console.log(position.coords.longitude)
+})
+</script>
+
+<button onclick="getLocation()">Get location</button> 
+<button id="google">Show location</button> 
 
 <li>The first button should check <a href="https://www.w3schools.com/html/html5_geolocation.asp">Geolocation</a> of the user, and output it to the console and to the 
 page. Note: Some browsers might not allow you to do this. Try different browsers if you get errors.</li>
