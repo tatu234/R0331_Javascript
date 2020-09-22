@@ -16,11 +16,6 @@ table, tr, td{
 }
 
 </style>
-<script>
-
-
-</script>
-
 <h1>Workshop 3: JavaScript Events</h1>
 <hr />
 <p>In this exercise we will practice the use of BOM and the JavaScript events. Use the lecture-material as a reference guide side by side these exercises. It might also be a 
@@ -38,7 +33,16 @@ modifying the background color of the box as well. &nbsp;
 command:   <i>document.getElementById("textdata").value</i>. We will study the forms deeper in Workshops 4 and 5.</li>
 </ul>
 <form>
-  <textarea id="textdata"></textarea><br>
+  <textarea id="textdata" onfocus="textArea(this)" onkeydown="totalChars(this)" placeholder="Please fill in the form with proper data."></textarea><br>
+  <div>Total characters: <span id="totalChars"> </span></div>
     <button>Send me</button>
+  <script>
+    function textArea(x) {
+      x.style.background = "lightblue";
+    }
+    var totalChars=function(input) {
+      document.getElementById('totalChars').innerHTML=input.value.length;
+    }
+  </script>
 </form>
 </html>
