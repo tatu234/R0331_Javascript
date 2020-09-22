@@ -25,25 +25,16 @@ good idea to save the lines of code you write during the exercises for later use
 
 <h2>Exercise 5</h2>
 
-<div id="coordinates" onmousemove="test(event)" onmouseout="clearcoor()"></div>
+<div id="coordinates"></div>
 <script>
+  document.getElementById("coordinates").onmousemove = function(event) {test(event)};
 function test(e) {
   var x=e.clientX;
   var y=e.clientY;
   var coor = "Coordinates: (" + x + "," +y+")";
   document.getElementById("coords").innerHTML=coor;
 }
-function clearCoor() {
-  var x=e.clientX;
-  var y=e.cleintY;
-  var coor = "Coordinates: (" +x+","+y+")";
-  document.getElementById("coords").innerHTML = coor;
-}
-function clearCoor() {
-  document.getElementById("coords").innerHTML ="";
-}
 </script>
-
 <p id="coords"></p>
 
 <p>Add onMouseMove -event to the DIV-element above. When you move mouse over the DIV (rectangle) the program should output the coordinates of your pointer. Try first 
