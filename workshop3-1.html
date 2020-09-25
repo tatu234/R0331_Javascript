@@ -17,22 +17,9 @@ table, tr, td{
 
 </style>
 <script>
-function startTime(){
   var pvm = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-}</script>
-<script>
 </script>
 <script>
-  function People(){
-    var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde", 
-	       "Camilla F. Strickland","391-2150 Ac Rd.","Andorra",
-	       "Reagan U. Andrews", "P.O. Box 472, 2271 Mauris Ave","Faroe Islands",
-	       "Kelsey D. Clark", "P.O. Box 866, 7793 Aliquet Ave","Bulgaria"
-];
-  }
 </script>
 
 <h1>Workshop 3: JavaScript Events</h1>
@@ -44,9 +31,9 @@ good idea to save the lines of code you write during the exercises for later use
 <h2>Exercise 1</h2>
 <p>&nbsp;Below you will see three buttons. Edit the source code and add an onClick-events to these buttons.</p>
 <p>
-  <button onclick="alert('You clicked me! ');">Button 1</button>
+  <button onclick="alert('You clicked me! '+pvm);">Button 1</button>
   <button onClick="document.write(showTable)">Button 2</button>
-  <button>Button 3</button>
+  <button onClick="document.write(persons)">Button 3</button>
 </p>
 
 <ul>
@@ -111,14 +98,18 @@ var html = `
 
   <li>Button 3 should print out an HTML table (Name, Addrees, Country) using data from the following JavaScript array. HINT: Use looping to go through the array and print 
 the data surrounded by HTML-tags to create the table.  </li>
-<xmp>
+<p id=test3></p>
+<script>
 var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde", 
 	       "Camilla F. Strickland","391-2150 Ac Rd.","Andorra",
 	       "Reagan U. Andrews", "P.O. Box 472, 2271 Mauris Ave","Faroe Islands",
-	       "Kelsey D. Clark", "P.O. Box 866, 7793 Aliquet Ave","Bulgaria"
-];
-
-
-</xmp>
+	       "Kelsey D. Clark", "P.O. Box 866, 7793 Aliquet Ave","Bulgaria"];
+var text = " ";
+var i;
+for (i = 0; i < persons.length; i++) {
+  text += persons[i] + "<br>";
+}
+document.getElementById("test3").inner.HTML = text;
+</script>
 </ul>
 </html>
