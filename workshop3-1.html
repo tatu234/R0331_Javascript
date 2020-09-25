@@ -98,18 +98,16 @@ var html = `
 
   <li>Button 3 should print out an HTML table (Name, Addrees, Country) using data from the following JavaScript array. HINT: Use looping to go through the array and print 
 the data surrounded by HTML-tags to create the table.  </li>
-<p id=test3></p>
 <script>
 var persons = ["Nyssa P. Skinner", "593-4241 Lacus, St.","Cape Verde", 
 	       "Camilla F. Strickland","391-2150 Ac Rd.","Andorra",
 	       "Reagan U. Andrews", "P.O. Box 472, 2271 Mauris Ave","Faroe Islands",
 	       "Kelsey D. Clark", "P.O. Box 866, 7793 Aliquet Ave","Bulgaria"];
-var text = " ";
-var i;
-for (i = 0; i < persons.length; i++) {
-  text += persons[i] + "<br>";
-}
-document.getElementById("test3").inner.HTML = text;
+
+    document.write("<table border='1'>");
+    for (var i=0; i < persons.length; i+=3){
+      document.write("<tr><td>"+persons[i]+"</td><td>"+persons[i+1]+"</td><td>"+persons[i+2]+"</td></tr></table>");
+    }	
 </script>
 </ul>
 </html>
