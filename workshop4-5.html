@@ -20,19 +20,11 @@ img {
 }
 
 </style>
+<script>
 
-<script>
-function exercise2() {
-  document.getElementById("test2").style.fontSize = "15px";
-  document.getElementById("test2").style.fontFamily = "Times New Roman";
-  document.getElementById("test2").style.backgroundColor = "pink";
-  document.getElementById("test2").style.color = "blue";
-}
-</script>
-<script>
-  function exercise3() {
-    document.getElementById("test3").style = "bold";
-  }
+<!-- JavaScript goes here -->
+
+
 </script>
 
 <h1>Workshop 4: DOM Scripting</h1>
@@ -43,9 +35,9 @@ function exercise2() {
 <h2>Exercise 1: Basic  DOM Manipulation</h2>
 <p>&nbsp;Below you will see three buttons. Edit the source code and add an onClick-events to these buttons. Use Developer Console to find the </p>
 <p>
-  <button onclick="document.getElementsByTagName('h1')[0].innerHTML ='Modified heading!'">Button 1</button>
-  <button onclick="exercise2()">Button 2</button>
-  <button onclick="exercise3()">Button 3</button>
+  <button onclick="">Button 1</button>
+  <button onclick="">Button 2</button>
+  <button onclick="">Button 3</button>
 </p>
 
 <ul>
@@ -54,10 +46,10 @@ function exercise2() {
   will modify the style of the &quot;Exercise 2&quot; heading on this page. JavaScript should change at least the font size, style and color and the background color
   <li>The third button should append the following text paragraph after the <strong>4th paragraph tag &lt;p&gt;</strong> on the page (without overwriting the current content). Change the background of the entire page as well. Note: The Lorem ipsum text should be in italics. It should also add a logo image of some sort after the text.<br>
     <br>
-    <p id="test3"><strong id="lorem"><em>&quot;Lorem ipsum</em></strong><em> dolor sit amet, consectetuer   adipiscing elit. Sed posuere interdum sem. Quisque ligula eros   ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam   vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget   velit. &quot;</p></em></li>
+  <strong id="lorem"><em>&quot;Lorem ipsum</em></strong><em> dolor sit amet, consectetuer   adipiscing elit. Sed posuere interdum sem. Quisque ligula eros   ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam   vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget   velit. &quot;</em></li>
 </ul>
 
-<h2 id=test2>Exercise 2: DOM Traversing using ID's and classes</h2>
+<h2>Exercise 2: DOM Traversing using ID's and classes</h2>
 <p class="surprise">Add onchange -events to following checkboxes.</p>
 <p>
   <label>
