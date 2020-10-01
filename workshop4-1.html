@@ -30,9 +30,15 @@ function exercise2() {
 }
 </script>
 <script>
-  function exercise3() {
-    document.getElementById("test3").style.fontStyle = "bold";
-  }
+function exercise3(){
+    var z=document.getElementsByTagName('p');
+    z[3].innerHTML+="<br><br>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed posuere interdum sem. Quisque ligula eros ullamcorper quis, lacinia quis facilisis sed sapien. Mauris varius diam vitae arcu. Sed arcu lectus auctor vitae, consectetuer et venenatis eget velit.";
+    z[3].style.fontStlyle = "italic";
+    document.body.style.background="yellow";
+    var img=document.createElement("IMG");
+    img.setAttribute("src","https://i.redd.it/5hox9ss0wdl51.jpg");
+    document.getElementsByTagName('p')[3].appendChild(img);
+}
 </script>
 
 <h1>Workshop 4: DOM Scripting</h1>
