@@ -22,9 +22,23 @@ img {
 </style>
 <script>
 
-<!-- JavaScript goes here -->
+function insertRows(){
+var nimi=document.getElementById("textfield");
+var tyo=document.getElementById("textfield2");
+var palkka=document.getElementById("textfield3");
+var taulu=document.getElementById("data");
 
+var laske=taulu.rows.length;
+var rivi=taulu.insertRow(laske);
 
+var ruutu1=rivi.insertCell(0);
+var ruutu2=rivi.insertCell(1);
+var ruutu3=rivi.insertCell(2);
+
+ruutu1.innerHTML=nimi.value;
+ruutu2.innerHTML=tyo.value;
+ruutu3.innerHTML=palkka.value;
+}
 </script>
 
 <h1>Workshop 4: DOM Scripting</h1>

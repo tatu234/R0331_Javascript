@@ -21,9 +21,10 @@ img {
 
 </style>
 <script>
-  function hide() {
-    document.getElementById("data").style.display = "none";
-  }
+document.getElementById("data").onchange = function() {hide()};
+function hide() {
+  document.getElementById("data").style.display = "none";
+}
 </script>
 <script>
   function show() {
@@ -31,9 +32,9 @@ img {
   }
 </script>
 <script>
-  function surprise1() {
-  document.getElementById("surprise").style.fontSize="20px";
-  }
+document.getElementById('CheckboxGroup1_2').addEventListener("change", function() {
+    document.getElementsByClassName("surprise").style.fontSize="20px";});
+
 </script>
 
 <h1>Workshop 4: DOM Scripting</h1>

@@ -27,31 +27,43 @@ document.getElementById("carimage").style.left="200px";
 }
 </script>
 <script>
-  function doMove() {
-  var elem = document.getElementById("carimage");   
-  var pos = 0;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (pos == 1000) {
-      clearInterval(id);
-    } else {
-      pos++;
-      elem.style.left = pos + '1px'; 
-    }
-  }
+function doMove(){
+var move1=document.getElementById("carimage");
+var place=0;
+var id=setInterval(frame, 0.5);
+function frame(){if(place==800){
+    clearInterval(id);
+}else{
+    place++;
+    move1.style.left=place+"px";
+}}
 }
 </script>
 <script>
-  function fadeOut() {
-    var op = 1;
-    var timer = setInterval(function () {
-        if (op <= 0.1){
-            clearInterval(timer);
-        }
-        element.style.opacity = op;
-        op -= 0.1;
-    }, 50);
-}
+    var opacity = 0;
+    var intervalID=0;
+    function fadeOut() {
+    intervalID=setInterval(hide,20);
+    } function hide()
+ {
+ var img = document.getElementById("carimage");
+ opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+ if(opacity>0)
+ {
+ opacity=opacity-0.1;
+ img.style.opacity=opacity;
+ console.log(opacity);
+ }
+ else
+ {
+ clearInterval(intervalID);
+ }
+ }
+</script>
+<script>
+  function remove() {
+    
+  }
 </script>
 
 <h1>Workshop 4: DOM Scripting</h1>
