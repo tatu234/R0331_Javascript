@@ -24,18 +24,24 @@ img {
 function pick() {
   var x = document.getElementById("mySelect").value;
     alert("You selected " +x+".");
-if(document.getElementById("mySelect").options[0].value){
-document.getElementById("carimage").src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRTPZdjvrYzGbUs5ZvMezHZ9dBdVw-FtLnXlw&usqp=CAU";
 }
-if (document.getElementById("mySelect").options[1].value){
-document.getElementById("carimage").src="https://media.ed.edmunds-media.com/audi/r8/2020/oem/2020_audi_r8_convertible_v10-performance-quattro-spyder_fq_oem_1_815.jpg";
+function changeImage() {
+  var data = document.getElementById('mySelect').value;
+  var image = document.getElementById('carimage');
+  
+if(data == "BMW"){
+image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRTPZdjvrYzGbUs5ZvMezHZ9dBdVw-FtLnXlw&usqp=CAU";
 }
-if (document.getElementById("mySelect").options[2].value){
-document.getElementById("carimage").src="https://autotoday.fi/wp-content/uploads/2020/09/Mercedes-Benz-S-sarja-2021-etuviisti-maantiella-Kuva-Daimler-696x464.jpg";
+else if (data == "Audi"){
+image.src="https://media.ed.edmunds-media.com/audi/r8/2020/oem/2020_audi_r8_convertible_v10-performance-quattro-spyder_fq_oem_1_815.jpg";
 }
-if (document.getElementById("mySelect").options[3].value){
-document.getElementById("carimage").src="https://dsu2f16ugr2z8.cloudfront.net/800x600,fit/autotalliprodmedia/images/processed/original/375/420/26/1590156886614.jpg";
-}}
+else if (data == "Mersedes"){
+iamge.src="https://autotoday.fi/wp-content/uploads/2020/09/Mercedes-Benz-S-sarja-2021-etuviisti-maantiella-Kuva-Daimler-696x464.jpg";
+}
+else if (data == "Volvo"){
+image.src="https://dsu2f16ugr2z8.cloudfront.net/800x600,fit/autotalliprodmedia/images/processed/original/375/420/26/1590156886614.jpg";
+}
+}
 </script>
 <script>
 function borderIn() {
