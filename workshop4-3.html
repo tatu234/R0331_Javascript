@@ -38,15 +38,11 @@ document.getElementById("carimage").src="https://dsu2f16ugr2z8.cloudfront.net/80
 }}
 </script>
 <script>
-document.getElementById("demo").onmouseover = function() {borderIn(this)};
-document.getElementById("demo").onmouseout = function() {borderOut(this)};
-
-function mouseOver() {
-  document.getElementById("demo").style.borderIn = "red";
+function borderIn() {
+  document.getElementById('carimage').style = "border: 5px solid red";
 }
-
-function mouseOut() {
-  document.getElementById("demo").style.borderOut = "black";
+function borderOut() {
+  document.getElementById('carimage').style = "border: 0px solid black";
 }
 </script>
 
