@@ -32,9 +32,12 @@ function hide() {
   }
 </script>
 <script>
-document.getElementById('CheckboxGroup1_2').addEventListener("change", function() {
-    document.getElementsByClassName("surprise").style.fontSize="20px";});
-
+  function surprise1() {
+    var taulu = document.querySelectorAll('.surprise1');
+    for (var i=0; i < taulu.length; i++){
+      taulu[i].style.fontSize=20;
+    }
+  }
 </script>
 
 <h1>Workshop 4: DOM Scripting</h1>
@@ -71,8 +74,8 @@ document.getElementById('CheckboxGroup1_2').addEventListener("change", function(
     Show me</label>
   <br>
   <label>
-    <input type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
-    <span id="surpise" onchange="surprise1">Surprise</span>
+    <input onchange="surprise1()" type="checkbox" name="CheckboxGroup1" value="3" id="CheckboxGroup1_2"> 
+    <span>Surprise</span>
   </label>
 </p>
 <ul>
