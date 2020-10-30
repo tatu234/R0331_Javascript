@@ -16,17 +16,38 @@ table, tr, td{
 }
 
 </style>
-
+<!-- exercise #1-->
 <script>
-var destination= document.getElementById("destination");
-var arriving= document.getElementById("arrival");
+function getData() {
+  var destination= document.getElementById("destination");
+  var arriving= document.getElementById("arrival");
+  var service = document.getElementById("services");
 
-localStorage.setItem("destination", inputdestination.value);
-localStorage.setItem("arrival", inputarrival.value);
+  localStorage.setItem("destination", destination.value);
+  localStorage.setItem("arrival", arrival.value);
+  localStorage.setItem("services", services.value);
+}
 </script>
 <!-- exercise #2 -->
+<script>
+  function somid(sessiondata) {
+    localStorage.getIem("destination");
+    localStorage.getItem("arrival");
+    
+  }
+</script>
 
-<body onload="">
+<!--exercise #3-->
+<script>
+  function getData() {
+  var destination= document.getElementById("destination");
+  var arriving= document.getElementById("arrival");
+
+  sessionStorage.setItem("destination", destination.value);
+  sessionStorage.setItem("arrival", arrival.value);
+  }
+</script>
+<body onload="somid()">
 
 <h1>Workshop 6: Using Localstorage</h1>
 <hr />
