@@ -19,32 +19,89 @@ table, tr, td{
 <!-- exercise #1-->
 <script>
 function getData() {
-  var destination= document.getElementById("destination");
-  var arriving= document.getElementById("arrival");
-  var service = document.getElementById("services");
+  if (typeof (Storage) !== "undefined") {
+      var city = document.getElementById("destination").value;
+      localStorage.setItem("destination", city);
+      console.log(localStorage.getItem("destination"));
 
-  localStorage.setItem("destination", destination.value);
-  localStorage.setItem("arrival", arrival.value);
-  localStorage.setItem("services", services.value);
-}
+      var day = document.getElementById("arrival").value;
+      localStorage.setItem("arrival", day);
+      console.log(localStorage.getItem("arrival"));
+
+      var checkbox1 = document.getElementById("CheckboxGroup1_0");
+      localStorage.setItem("Internet", checkbox1.checked);
+      console.log(localStorage.getItem("Internet"));
+
+      var checkbox2 = document.getElementById("CheckboxGroup1_1");
+      localStorage.setItem("Air Conditioning", checkbox2.checked);
+      console.log(localStorage.getItem("Air Conditioning"));
+
+      var checkbox3 = document.getElementById("CheckboxGroup1_2");
+      localStorage.setItem("Minibar", checkbox3.checked);
+      console.log(localStorage.getItem("Minibar"));
+
+      var checkbox4 = document.getElementById("CheckboxGroup1_3");
+      localStorage.setItem("Car rent", checkbox4.checked);
+      console.log(localStorage.getItem("Car rent"));
+
+      var checkbox5 = document.getElementById("CheckboxGroup1_4");
+      localStorage.setItem("Sauna", checkbox5.checked);
+      console.log(localStorage.getItem("Sauna"));
+
+    } else {
+      document.getElementById("destination").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+  }
 </script>
 <!-- exercise #2 -->
 <script>
-  function somid(sessiondata) {
-    localStorage.getIem("destination");
-    localStorage.getItem("arrival");
-    
-  }
+function somid(){
+  var city = localStorage.getItem("destination");
+  var time=localStorage.getItem("arrival");
+  var net=localStorage.getItem("Internet");
+  var aircond=localStorage.getItem("Air Conditioning");
+  var bar=localStorage.getItem("Minibar");
+  var car=localStorage.getItem("Car rent");
+  var sauna=localStorage.getItem("Sauna");
+  document.getElementById("sessiondata").innerHTML = "Destination: "+city+'<br/>'+"Arrival: "+time+'<br/>'+"Internet: "+net+"<br>  Air Condition: "+aircond+"<br>  Minibar: "+bar+"<br>  CarRent: "+car+"<br> Sauna: "+sauna;
+}
 </script>
 
 <!--exercise #3-->
 <script>
   function getData() {
-  var destination= document.getElementById("destination");
-  var arriving= document.getElementById("arrival");
+    if (typeof (Storage) !== "undefined") {
+      var city2 = document.getElementById("destination").value;
+      sessionStorage.setItem("destination", city2);
+      console.log(sessionStorage.getItem("destination"));
 
-  sessionStorage.setItem("destination", destination.value);
-  sessionStorage.setItem("arrival", arrival.value);
+      var day2 = document.getElementById("arrival").value;
+      sessionStorage.setItem("arrival", day2);
+      console.log(sessionStorage.getItem("arrival"));
+
+      var checkbox21 = document.getElementById("CheckboxGroup1_0");
+      sessionStorage.setItem("Internet", checkbox21.checked);
+      console.log(sessionStorage.getItem("Internet"));
+
+      var checkbox22 = document.getElementById("CheckboxGroup1_1");
+      sessionStorage.setItem("Air Conditioning", checkbox22.checked);
+      console.log(sessionStorage.getItem("Air Conditioning"));
+
+      var checkbox23 = document.getElementById("CheckboxGroup1_2");
+      sessionStorage.setItem("Minibar", checkbox23.checked);
+      console.log(sessionStorage.getItem("Minibar"));
+
+      var checkbox24 = document.getElementById("CheckboxGroup1_3");
+      sessionStorage.setItem("Car rent", checkbox24.checked);
+      console.log(sessionStorage.getItem("Car rent"));
+
+      var checkbox25 = document.getElementById("CheckboxGroup1_4");
+      sessionStorage.setItem("Sauna", checkbox25.checked);
+      console.log(sessionStorage.getItem("Sauna"));
+
+    } else {
+      document.getElementById("destination").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
   }
 </script>
 <body onload="somid()">
