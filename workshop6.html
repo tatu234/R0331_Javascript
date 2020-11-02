@@ -68,8 +68,8 @@ function somid(){
 </script>
 
 <!--exercise #3-->
-<script>
-  function getData() {
+
+ <noscript> function getData() {
     if (typeof (Storage) !== "undefined") {
       var city2 = document.getElementById("destination").value;
       sessionStorage.setItem("destination", city2);
@@ -103,7 +103,7 @@ function somid(){
       document.getElementById("destination").innerHTML = "Sorry, your browser does not support Web Storage...";
     }
   }
-</script>
+</noscript>
 <body onload="somid()">
 
 <h1>Workshop 6: Using Localstorage</h1>
