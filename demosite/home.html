@@ -35,67 +35,6 @@
 		$("#ajax").load("http://www.iltalehti.fi/rss.xml")
 		});
 </script>	
-<script>
-	$("#mySelect").change(function(){
-	var first="first";
-	var second="second";
-	var third="third";
-	if(first==$("#mySelect").val()){
-		funktio1();
-	}	if(second==$("#mySelect").val()){
-		funktio2();
-	}	if(third==$("#mySelect").val()){
-		funktio3();
-	}
-  });
-  function funktio1() {
-			$("#ajax").empty();
-			$.ajax({
-				url: "https://www.is.fi/rss/kotimaa.xml",
-				type: "GET",
-				dataType: "xml",
-				cache: false,
-				success: parseXml
-			});
-			function parseXml(xml) {
-				$(xml).find("item").each(function () {
-					$("#ajax").append($(this).find("title").text() + "<p><br>");
- 
-				});
-			}
-		}
-		function funktio2() {
-			$("#ajax").empty();
-			$.ajax({
-				url: "https://www.is.fi/rss/ulkomaat.xml",
-				type: "GET",
-				dataType: "xml",
-				cache: false,
-				success: parseXml
-			});
-			function parseXml(xml) {
-				$(xml).find("item").each(function () {
-					$("#ajax").append($(this).find("title").text() + "<p><br>");
- 
-				});
-			}
-		}
-		function funktio3() {
-			$("#ajax").empty();
-			$.ajax({
-				url: "https://www.is.fi/rss/tiede.xml",
-				type: "GET",
-				dataType: "xml",
-				cache: false,
-				success: parseXml
-			});
-			function parseXml(xml) {
-				$(xml).find("item").each(function () {
-					$("#ajax").append($(this).find("title").text() + "<p><br>");
-				});
-			}
-		}
-</script>
 
 <div id="wrapper">
    <div id="branding">
@@ -147,13 +86,6 @@ There are many variations of passages of <a href="#">Lorem Ipsum</a> available:<
         </ul>
 	   <img src="images/sideBarListBoxBottom.png" alt="" width="240" height="10" />
 	  </div>
-	  <p>
-		<input type="button" name="button" id="button" value="Button">
-		<input type="button" name="button2" id="button2" value="Button">
-		<input type="button" name="button3" id="button3" value="Button">
-		<input type="button" name="button4" id="button4" value="Button">
-		<input type="button" name="button5" id="button5" value="Button">
-	  </p>
 	  <div class="sideBarItem">
 	  <h3>Blogroll</h3>
 	  <ul>
